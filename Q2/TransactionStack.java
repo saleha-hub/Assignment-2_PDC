@@ -3,7 +3,6 @@ public class TransactionStack {
     private char[] stack;
     private int top;
     private int capacity;
-
     public TransactionStack(int capacity) {
         this.capacity = capacity;
         stack = new char[capacity];
@@ -17,8 +16,7 @@ public class TransactionStack {
     }
     public char pop() {
         if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
-        }
+            throw new IllegalStateException("Stack is empty"); }
         return stack[top--];
     }
     public char peek() {
@@ -28,6 +26,5 @@ public class TransactionStack {
         return stack[top];
     }
     public boolean isEmpty() {
-        return top == -1;
-    }
+        return top == -1;  }
 }

@@ -1,5 +1,4 @@
 package Q2;
-
 public class RequestQueue {
     private char[] queue;
     private int front;
@@ -15,23 +14,18 @@ public class RequestQueue {
     }
     public void enqueue(char value) {
         if (size == capacity) {
-            throw new IllegalStateException("Queue is full");
-        }
+            throw new IllegalStateException("Queue is full"); }
         queue[rear] = value;
         rear = (rear + 1) % capacity;
-        size++;
-    }
+        size++; }
     public char dequeue() {
         if (isEmpty()) {
-            throw new IllegalStateException("Queue is empty");
-        }
+            throw new IllegalStateException("Queue is empty"); }
         char value = queue[front];
         front = (front + 1) % capacity;
         size--;
-        return value;
-    }
+        return value;}
     public boolean isEmpty() {
-        return size == 0;
-    }
+        return size == 0; }
 }
 
